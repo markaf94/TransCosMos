@@ -6,16 +6,54 @@ using System.Threading.Tasks;
 
 namespace TransCosMos
 {
-    class Program
+    /*
+     * This Program prints the output for FizzBuzz from 1 - 100
+     * 
+     */
+    public class Program
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
+            for ( int i = 1; i <= 100; i ++ )
+            {
+                Console.WriteLine(FizzBuzz(i));
+            }
+            Console.WriteLine("Press anything to quit");
             Console.ReadKey();
+        }
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        /*
+         * Returns:
+         * Fizz, when number can be divided by 3.
+         * Buzz, when number can be divided by 5.
+         * Fizz Buzz, when number can be divided by 3 and 5.
+         * The number, if none of the above cases are true.
+         * 
+         * Param:
+         * Number, the input.
+         */
+        public static string FizzBuzz(int number)
+        {
+            string result;
+
+            if (number % 3 == 0 && number % 5 == 0)
+            {
+                result = "Fizz Buzz";
+            }
+            else if (number % 3 == 0)
+            {
+                result = "Fizz";
+            }
+            else if (number % 5 == 0)
+            {
+                result = "Buzz";
+            }
+            else
+            {
+                result = number.ToString();
+            }
+
+            return result;
         }
     }
 }
