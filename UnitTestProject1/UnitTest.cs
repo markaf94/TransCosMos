@@ -10,6 +10,7 @@ namespace TransCosMosTest
         private const string ExpectedFizz = "Fizz";
         private const string ExpectedBuzz = "Buzz";
         private const string ExpectedFizzBuzz = "Fizz Buzz";
+        private const string ExpectedError = "Error";
 
         [TestMethod]
         public void TestFizz()
@@ -41,6 +42,14 @@ namespace TransCosMosTest
             Assert.AreEqual("2", TransCosMos.Program.FizzBuzz(2));
             Assert.AreEqual("4", TransCosMos.Program.FizzBuzz(4));
             Assert.AreEqual("31", TransCosMos.Program.FizzBuzz(31));
+        }
+
+        [TestMethod]
+        public void TestError()
+        {
+            Assert.AreEqual(ExpectedError, TransCosMos.Program.FizzBuzz(0));
+            Assert.AreEqual(ExpectedError, TransCosMos.Program.FizzBuzz(103));
+            Assert.AreEqual(ExpectedError, TransCosMos.Program.FizzBuzz(-5));
         }
     }
 }
