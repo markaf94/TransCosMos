@@ -40,7 +40,6 @@ namespace TransCosMos
             {
                 return result = "Error";
             }
-
             if (number % 3 == 0 && number % 5 == 0)
             {
                 result = "Fizz Buzz";

@@ -12,6 +12,7 @@ namespace TransCosMosTest
         private const string ExpectedFizzBuzz = "Fizz Buzz";
         private const string ExpectedError = "Error";
 
+        //Tests for multiples of 3 return Fizz
         [TestMethod]
         public void TestFizz()
         {
@@ -20,6 +21,7 @@ namespace TransCosMosTest
             Assert.AreEqual(ExpectedFizz, TransCosMos.Program.FizzBuzz(33));
         }
 
+        //Tests for multiples of 5 return Buzz
         [TestMethod]
         public void TestBuzz()
         {
@@ -28,6 +30,7 @@ namespace TransCosMosTest
             Assert.AreEqual(ExpectedBuzz, TransCosMos.Program.FizzBuzz(35));
         }
 
+        //Tests for multiples of 5 and 3 return Fizz Buzz
         [TestMethod]
         public void TestFizzBuzz()
         {
@@ -36,6 +39,7 @@ namespace TransCosMosTest
             Assert.AreEqual(ExpectedFizzBuzz, TransCosMos.Program.FizzBuzz(45));
         }
 
+        //Tests for non multiples of 5 and 3 return just the number
         [TestMethod]
         public void TestNumber()
         {
@@ -44,6 +48,7 @@ namespace TransCosMosTest
             Assert.AreEqual("31", TransCosMos.Program.FizzBuzz(31));
         }
 
+        //Tests for error case
         [TestMethod]
         public void TestError()
         {
